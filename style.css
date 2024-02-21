@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+.main_box {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-image: url('keyboard.png');
+    background-size: cover;
+
+}
+
+.main_box .side_bar {
+    position: fixed;
+    height: 100vh;
+    width: 280px;
+    left: -280px;
+    background-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 6px rgba(255, 255, 255, 0.5);
+    overflow: hidden;
+    transition: aall 0.3s linear;
+}
+
+.side_bar .logo {
+    width: 100%;
+    height: 60px;
+    box-shadow: 0 2px 4px rgba(255, 255, 255, 0.5);
+    position: absolute;
+}
+
+.side_bar .logo a {
+    position: absolute;
+    left: 50px;
+    color: #fff;
+    text-decoration: none;
+    line-height: 60px;
+    font-size: 25px;
+    font-weight: 500;
+}
+
+.side_bar .menu {
+    position: absolute;
+    top: 80px;
+    width: 100%;
+}
+
+.side_bar .menu li {
+    margin-top: 6px;
+    padding: 15px;
+}
+
+.side_bar .menu i {
+    color: #fff;
+    padding-right: 8px;
+    font-size: 18px;
+}
+
+.side_bar .menu a {
+    color: #fff;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+.side_bar .menu li:hover {
+    border-left: 1px solid #fff;
+    box-shadow: 0 0 4px rgba(255, 255, 255, 0.5);
+}
+
+.side_bar .social_media {
+    position: absolute;
+    list-style: none;
+    left: 50%;
+    bottom: 20px;
+    transform: translateX(-50%);
+    cursor: pointer;
+
+}
+
+.side_bar .social_media a {
+    text-decoration: none;
+    color: #fff;
+    padding: 0 5px;
+    font-size: 18px;
+    opacity: 0.6;
+    cursor: pointer;
+}
+
+.side_bar .social_media a:hover {
+    opacity: 1;
+    transition: all 0.2s linear;
+    transform: scale(1.01);
+}
+
+.main_box .button1 i {
+    color: #fff;
+    font-size: 25px;
+    cursor: pointer;
+    position: absolute;
+    line-height: 60px;
+    font-weight: 700;
+    left: 16px;
+    opacity: 1;
+    transition: all 0.3s linear;
+}
+
+.button1 i:hover {
+    font-size: 20px;
+}
+
+.side_bar .button2 i {
+    font-size: 25px;
+    cursor: pointer;
+    position: absolute;
+    line-height: 60px;
+    left: 240px;
+    opacity: 1;
+    transition: all 0.3s linear;
+}
+
+#check {
+    display: none;
+}
+
+.button2 i:hover {
+    font-size: 23px;
+}
+
+#check:checked~.side_bar {
+    left: 0;
+}
+
+#check:checked~.button1 i {
+    opacity: 0;
+}
+
+#check:checked~.side_bar .button2 i {
+    opacity: 1;
+}
